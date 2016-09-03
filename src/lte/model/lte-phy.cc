@@ -215,14 +215,14 @@ LtePhy::SetControlMessages (Ptr<LteControlMessage> m)
 {
   // In uplink the queue of control messages and packet are of different sizes
   // for avoiding TTI cancellation due to synchronization of subframe triggers
-  std::cout<<"The address of send queue is"<<&m_controlMessagesQueue<<std::endl;
+  std::cout<<"The address of send queue is "<<&m_controlMessagesQueue<<std::endl;
   m_controlMessagesQueue.at (m_controlMessagesQueue.size () - 1).push_back (m);
 }
 
 std::list<Ptr<LteControlMessage> >
 LtePhy::GetControlMessages (void)
 {
-  std::cout<<"The address of receiving queue is"<<&m_controlMessagesQueue<<std::endl;
+  std::cout<<"The address of receiving queue is "<<&m_controlMessagesQueue<<std::endl;
   NS_LOG_FUNCTION (this);
   if (m_controlMessagesQueue.at (0).size () > 0)
     {
